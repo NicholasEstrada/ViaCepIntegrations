@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Endereço</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="buscador">
+        <div>
+            <label for="cepInput">CEP:</label>
+            <input type="text" id="cepInput" placeholder="Digite o CEP">
+            <button onclick="consultarCEP()">Consultar</button>
+        </div>
+
+        <div class="resultadoBusca">
+            <div id="resultado"></div>
+        </div>
+</div>
+
+    <div class="tableBuscas">
+
+        <table>
+            <tr>
+                <th><button onclick="ordenarRegistros('cidade')">Cidade</button></th>
+                <th><button onclick="ordenarRegistros('bairro')">Bairro</button></th>
+                <th><button onclick="ordenarRegistros('estado')">Estado</button></th>
+                <th><button onclick="ordenarRegistros('cep')">CEP</button></th>
+                <th><button onclick="ordenarRegistros('logradouro')">Logradouro</button></th>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
