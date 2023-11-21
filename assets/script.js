@@ -77,8 +77,12 @@ function carregarRegistros() {
     fetch('logic/carregar.php')
     .then(response => response.json())
     .then(data => {
-        registros = data;
-        exibirRegistros();
+        if (data !== null) {
+            registros = data;
+            exibirRegistros();
+        } else {
+            console.error('Os dados carregados estão vazios ou nulos.');
+        }
     })
     .catch(error => {
         console.error('Erro ao carregar registros:', error);
